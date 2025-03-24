@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-optical-sizing: auto;
+        padding: 175px 0px 0px 0px;
+        background-color: #f3eae3;
+      }
+
+      .card {
+        display: flex;
+        width: 600px;
+        height: 450px;
+        border-radius: 12px;
+        overflow: hidden;
+        margin: 0 auto;
+      }
+
+      .mobile-image {
+        display: none;
+      }
+
+      .card-image img {
+        width: 300px;
+        overflow: hidden;
+
+        background-size: cover;
+        background-position: left center;
+        background-repeat: no-repeat;
+        object-fit: cover;
+      }
+
+      .card-text {
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        background: #ffffff;
+        padding: 36px 32px 32px 32px;
+      }
+
+      .card-text h1 {
+        font-family: "Fraunces", serif;
+        color: #1e252f;
+
+        font-optical-sizing: auto;
+        font-size: 32px;
+        font-weight: bold;
+        line-height: 1.03;
+        margin-bottom: 19px;
+      }
+
+      .card-text h2 {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 500;
+        font-size: 12px;
+        color: #77818f;
+        line-height: 1.03;
+        letter-spacing: 0.41em;
+        margin-bottom: 13px;
+      }
+
+      .card-text p {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 500;
+        font-size: 14px;
+        color: #77818f;
+        line-height: 23px;
+        letter-spacing: 0.01em;
+        margin-bottom: 26px;
+      }
+
+      .prices {
+        display: flex;
+        gap: 18px;
+        align-items: center;
+        margin-bottom: 25px;
+      }
+
+      .big-price {
+        font-size: 32px;
+        font-weight: bold;
+        font-family: "Fraunces", serif;
+        color: #2d6b4f;
+      }
+
+      .little-price {
+        font-family: "Montserrat", sans-serif;
+        font-size: 13px;
+        font-weight: 500;
+        color: #77818f;
+      }
+
+      button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+        width: 236px;
+        height: 48px;
+        border-radius: 8px;
+        border: none;
+        cursor: pointer;
+        background: #2d6b4f;
+      }
+      button:hover {
+        background: #123d26;
+      }
+
+      .button-text {
+        color: #fff;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 23px;
+        letter-spacing: 0.02em;
+      }
+
+      @media (max-width: 615px) {
+        body {
+          padding: 45px 0px;
+        }
+
+        .card {
+          display: flex;
+          flex-direction: column;
+          width: 300px;
+          height: auto;
+        }
+
+        .card-image img .mobile-image {
+          display: block;
+        }
+
+        .card-image img.desktop-image {
+          display: none;
+        }
+
+        .card-image img {
+          width: 100%;
+          height: 240px;
+          object-position: center bottom;
+          display: block;
+        }
+
+        .card-text {
+          padding: 26px 32px 24px 32px;
+        }
+
+        .prices {
+          margin-bottom: 15px;
+        }
+
+        .card-text p {
+          margin-bottom: 19px;
+        }
+
+        .card-text h1 {
+          margin-bottom: 14px;
+        }
+      }
+    </style>
+    <title>product preview card coponent</title>
+  </head>
+  <body>
+    <div class="card">
+      <div class="card-image">
+        <img
+          src="images/image-product-desktop.jpg"
+          alt=""
+          class="desktop-image"
+        />
+        <img
+          src="images/image-product-mobile2.jpg"
+          alt=""
+          class="mobile-image"
+        />
+      </div>
+      <div class="card-text">
+        <h2>PERFUME</h2>
+        <h1>Gabrielle Essence Eau De Parfum</h1>
+        <p>
+          A floral, solar and voluptuous interpretation composed by Olivier
+          Polge, Perfumer-Creator for the House of CHANEL.
+        </p>
+        <div class="prices">
+          <div class="big-price">$149.99</div>
+          <div class="little-price"><s>$169.99</s></div>
+        </div>
+        <button>
+          <img src="images/icon-cart.svg" alt="" />
+          <span class="button-text">Add to Cart</span>
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
